@@ -36,9 +36,10 @@ void printArray(struct array *parr)
 
 void getArray(struct array *parr)
 {
-    
+    char size[3];
+    if(fgets(size, 3, stdin) != NULL){
 
-
+    }
 }
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)
