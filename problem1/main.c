@@ -40,14 +40,12 @@ void getArray(struct array *parr)
     parr->pdata = malloc(50);
     char size[10];
     char *endptr;
-    long sizeInt;
-    char sancocho[10];
+    char items[10];
     if(fgets(size, 10, stdin) != NULL){
-        sizeInt = strtol(size, &endptr, 10);
-        parr->size = sizeInt;
-        for(int i = 0; i < sizeInt; i++ ){
-            fgets(sancocho, 10, stdin);
-            *(parr->pdata+i) = strtol(sancocho, &endptr, 10);                     
+        parr->size = strtol(size, &endptr, 10);       
+        for(int i = 0; i < parr->size; i++ ){
+            fgets(items, 10, stdin);
+            *(parr->pdata+i) = strtol(items, &endptr, 10);                     
         }
     }
    
